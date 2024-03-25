@@ -38,8 +38,8 @@ Comparacao entre dois resultados:
 ```go test -bench=. -benchmem -count 10 > 2.bench```
 ``` benchstat 1.bench 2.bench ```
 
-Day 4
-->Metricas
+Dia 4
+-Metricas
 MELT
 	- Metrics
 		RED Metrics
