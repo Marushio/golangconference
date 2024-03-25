@@ -1,0 +1,19 @@
+#To work use the vccode plugin REST Client
+GET http://localhost:8081/users
+
+###
+
+POST http://localhost:8081/users
+Content-Type: application/json
+
+{
+    "name":"Marcio",
+    "email":"marcio@teste.com"
+}
+
+###
+GET http://localhost:8081/users/1
+Content-Type: application/json
+
+###
+GET http://localhost:8081/cpu
