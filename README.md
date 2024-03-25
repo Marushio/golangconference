@@ -1,49 +1,45 @@
 # golangconference
 Repository for Go Lang conference scripts
 
-to run
+To run
 ```go
 go run main.go
 ```
 
-to build for linux
+To build for linux
 ```go
 go build main.go
 ```
 
-to build for windows (.exe)
+To build for windows (.exe)
 ```go 
 GOOS=windows go build main.go
 ```
 
-//go-wrk programa que faz teste de carga 
-//-c forma concorrente
-//-d 15 segundos
-go-wrk -c 10 -d 15 http://localhost:8081/cpu
+go-wrk programa que faz teste de carga 
+-c forma concorrente
+-d 15 segundos
+```go-wrk -c 10 -d 15 http://localhost:8081/cpu```
 
-//Ferramenta de profile endpoint para status de Processamento
-go tool pprof -seconds 5 http://localhost:6060/debug/pprof/profile
-//Ferramenta de profile endpoint para status de Memoria
-go tool pprof -seconds 5 http://localhost:6060/debug/pprof/allocs
-comandos pprof:
+Ferramenta de profile endpoint para status de Processamento
+```go tool pprof -seconds 5 http://localhost:6060/debug/pprof/profile```
+Ferramenta de profile endpoint para status de Memoria
+```go tool pprof -seconds 5 http://localhost:6060/debug/pprof/allocs```
+Comandos pprof:
 ```top 20``` 20 top processos mais custosos
-```list CPUIntensiveEndpoint``` monstra em qual linha da func  CPUIntensiveEndpoint esta demorando mais para executar
+```list CPUIntensiveEndpoint``` monstra em qual linha da func  CPUIntensiveEndpoint esta demorando mais para Executar
 ```web``` Abre um grafico no navegador com o passo a passo das alocacoes de recursos
 
 
-go test examples:
-marcio_d@MarcioD-Gaming:~/repos/golangconference/day3$ go test -bench=. -benchmem
-PASS
-ok      golangconference        0.003s
-marcio_d@MarcioD-Gaming:~/repos/golangconference/day3$ go test -bench=. -benchmem -count 10 > 1.bench
-marcio_d@MarcioD-Gaming:~/repos/golangconference/day3$ go test -bench=. -benchmem -count 10 > 2.
-bench
-marcio_d@MarcioD-Gaming:~/repos/golangconference/day3$ benchstat 1.bench 2.bench 
-bash: benchstat: command not found
-marcio_d@MarcioD-Gaming:~/repos/golangconference/day3$ benchstat 1.bench 2.bench
+Gera teste de benchmark 
+```go test -bench=. -benchmem```
+Comparacao entre dois resultados:
+```go test -bench=. -benchmem -count 10 > 1.bench```
+```go test -bench=. -benchmem -count 10 > 2.bench```
+``` benchstat 1.bench 2.bench ```
 
+Day 4
 ->Metricas
-	Otel collector https://opentelemetry.io/docs/collector/
 MELT
 	- Metrics
 		RED Metrics
@@ -55,10 +51,11 @@ MELT
 		- Uma acao discreta que acontece em um momento no tempo.
 		- Tem releavancia para o negocio.
 	- Logs
+        - Otel collector https://opentelemetry.io/docs/collector/
 	- Traces
-	  - Loki
+	    - Loki
 
-Operators
+Operators:
 https://operatorhub.io/
 
 
