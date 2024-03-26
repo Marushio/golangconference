@@ -16,48 +16,46 @@ To build for windows (.exe)
 GOOS=windows go build main.go
 ```
 
-go-wrk programa que faz teste de carga 
--c forma concorrente
--d 15 segundos
-```
+Go-wrk programa que faz teste de carga, -c forma concorrente, -d 15 segundos
+```go 
 go-wrk -c 10 -d 15 http://localhost:8081/cpu
 ```
 
 Ferramenta de profile endpoint para status de Processamento:
-```
+```go 
 go tool pprof -seconds 5 http://localhost:6060/debug/pprof/profile
 ```
 Ferramenta de profile endpoint para status de Memoria:
-```
+```go 
 go tool pprof -seconds 5 http://localhost:6060/debug/pprof/allocs
 ```
 Comandos pprof:
 Top 20 processos mais custosos:
-```
+```go 
 top 20
 ``` 
 Monstrar em qual linha da func  CPUIntensiveEndpoint esta demorando mais para Executar
-```
+```go 
 list CPUIntensiveEndpoint
 ```
 Abrir um grafico no navegador com o passo a passo das alocacoes de recursos 
-```
+```go 
 web
 ``` 
 
 
 Gera teste de benchmark 
-```
+```go 
 go test -bench=. -benchmem
 ```
 Comparacao entre dois resultados:
-```
+```go
 go test -bench=. -benchmem -count 10 > 1.bench
 ```
-```
+```go 
 go test -bench=. -benchmem -count 10 > 2.bench
 ```
-```
+```go 
 benchstat 1.bench 2.bench
 ```
 
