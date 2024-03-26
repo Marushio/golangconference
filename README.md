@@ -19,24 +19,47 @@ GOOS=windows go build main.go
 go-wrk programa que faz teste de carga 
 -c forma concorrente
 -d 15 segundos
-```go-wrk -c 10 -d 15 http://localhost:8081/cpu```
+```
+go-wrk -c 10 -d 15 http://localhost:8081/cpu
+```
 
-Ferramenta de profile endpoint para status de Processamento
-```go tool pprof -seconds 5 http://localhost:6060/debug/pprof/profile```
-Ferramenta de profile endpoint para status de Memoria
-```go tool pprof -seconds 5 http://localhost:6060/debug/pprof/allocs```
+Ferramenta de profile endpoint para status de Processamento:
+```
+go tool pprof -seconds 5 http://localhost:6060/debug/pprof/profile
+```
+Ferramenta de profile endpoint para status de Memoria:
+```
+go tool pprof -seconds 5 http://localhost:6060/debug/pprof/allocs
+```
 Comandos pprof:
-```top 20``` 20 top processos mais custosos
-```list CPUIntensiveEndpoint``` monstra em qual linha da func  CPUIntensiveEndpoint esta demorando mais para Executar
-```web``` Abre um grafico no navegador com o passo a passo das alocacoes de recursos
+Top 20 processos mais custosos:
+```
+top 20
+``` 
+Monstrar em qual linha da func  CPUIntensiveEndpoint esta demorando mais para Executar
+```
+list CPUIntensiveEndpoint
+```
+Abrir um grafico no navegador com o passo a passo das alocacoes de recursos 
+```
+web
+``` 
 
 
 Gera teste de benchmark 
-```go test -bench=. -benchmem```
+```
+go test -bench=. -benchmem
+```
 Comparacao entre dois resultados:
-```go test -bench=. -benchmem -count 10 > 1.bench```
-```go test -bench=. -benchmem -count 10 > 2.bench```
-``` benchstat 1.bench 2.bench ```
+```
+go test -bench=. -benchmem -count 10 > 1.bench
+```
+```
+go test -bench=. -benchmem -count 10 > 2.bench
+```
+```
+benchstat 1.bench 2.bench
+```
 
 Dia 4
 -Metricas
