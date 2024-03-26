@@ -63,6 +63,12 @@ Links
 GO com bigtable (google)
 https://github.com/Marushio/golangconference_bigtable_example
 
+Go pubsub (google)
+https://github.com/Marushio/golangconferance-gcp-pubsub-example
+
+Go with api observability
+https://github.com/Marushio/golangconference-api-o11y-gcp
+
 Tsuro - Platform as a service
 https://tsuru.io/
 
