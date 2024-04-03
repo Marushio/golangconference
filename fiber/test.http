@@ -1,7 +1,0 @@
-GET http://localhost:3000/validateJson
-Content-Type: application/json
-
-{
-    "name":"Marcio",
-    "email":"marcio@teste.com"
-}
