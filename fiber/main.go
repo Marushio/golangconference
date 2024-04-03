@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"log"
 
-	"golangconference/fiber/database"
+	"github.com/Marushio/golangconference/fiber/database"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
