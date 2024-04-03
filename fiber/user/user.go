@@ -4,6 +4,6 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func GetBooks(c *fiber.Ctx) {
+func GetUsers(c *fiber.Ctx) {
 	c.SendString("All users")
 }
